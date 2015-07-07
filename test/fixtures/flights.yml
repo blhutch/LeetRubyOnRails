@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  airline: MyString
-  flight_number: 1
-  arrival_time: 
-  term_gate: MyString
-  airport_id: MyString
+  airline: UA
+  flight_number: 915
+  arrival_time: 1500
+  term_gate: C 22
+
 
 two:
-  airline: MyString
-  flight_number: 1
-  arrival_time: 
-  term_gate: MyString
-  airport_id: MyString
+  airline: DL
+  flight_number: 1452 
+  arrival_time: 1145
+  term_gate: A 15
+

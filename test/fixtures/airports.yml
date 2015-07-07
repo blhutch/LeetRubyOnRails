@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  short_name: MyString
-  city: MyString
-  state: MyString
-  country: MyString
+  short_name: ORD
+  city: Chicago
+  state: IL
+  country: USA
 
 two:
-  short_name: MyString
-  city: MyString
-  state: MyString
-  country: MyString
+  short_name: ATL
+  city: Atlanta
+  state: GA
+  country: USA
