@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
 	PASSWORD_REGEX = /\A[a-z0-9_-]{1,20}\z/i
 	NAME_REGEX = /\A[a-z-]{1,30}\z/i
 
-  validates :password, :access_token, presence: true
+ 
+  validates :password, presence: true, length: { minimum: 8 }
   # validates :password, format: { with: PASSWORD_REGEX, 
   #                                 message: "is not a valid password. Only chars, nums, hyphen, underscore, 1-20 chars"}
   validates :email, uniqueness: true, presence: true
@@ -19,6 +20,10 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   validates :last_name, format: { with: NAME_REGEX, 
                                   message: "is not a valid name. Only chars, hyphen, 1-30 chars"}
+
+  has_many :flights
+  has_many :user_flights, through: :flights
+  
 
   before_validation :ensure_access_token
 
@@ -36,5 +41,4 @@ class User < ActiveRecord::Base
     token
   end
 
-  has_many :flights
 end

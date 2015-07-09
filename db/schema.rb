@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707152609) do
+ActiveRecord::Schema.define(version: 20150707194512) do
 
   create_table "airports", force: :cascade do |t|
     t.string   "short_name"
@@ -51,11 +51,14 @@ ActiveRecord::Schema.define(version: 20150707152609) do
     t.string   "email"
     t.string   "password"
     t.string   "access_token"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "avatar_url"
     t.string   "linked_in_url"
     t.string   "phone_number"
+    t.string   "salt"
+    t.string   "password_digest"
+    t.string   "remember_digest"
   end
 
 end
