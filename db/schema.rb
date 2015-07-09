@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150707194512) do
 
+
   create_table "airports", force: :cascade do |t|
     t.string   "short_name"
     t.string   "city"
@@ -34,8 +35,6 @@ ActiveRecord::Schema.define(version: 20150707194512) do
     t.string   "dept_city_id"
     t.string   "arr_city_id"
   end
-
-  add_index "flights", ["flight_id"], name: "index_flights_on_flight_id"
 
   create_table "user_flights", force: :cascade do |t|
     t.integer  "user_id"

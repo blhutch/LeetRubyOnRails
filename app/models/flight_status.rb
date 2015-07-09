@@ -5,4 +5,5 @@ class FlightStatus
   def get_flight(flight_code)
     # magic happens
   end
+
 end
