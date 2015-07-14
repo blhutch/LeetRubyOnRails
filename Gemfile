@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #use Kaminari for pagination
 gem 'kaminari'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -57,7 +58,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'rack-cors', require: 'rack/cors'
   gem 'rails_12factor'
 end
 

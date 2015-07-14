@@ -51,7 +51,7 @@ class LayoversController < ApplicationController
     else 
       render json: { message: 'You must be logged in to edit this information.' },
         status: :unprocessable_entity
-    end
+    
   end
 
   def update_layover
