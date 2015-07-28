@@ -210,6 +210,42 @@ Response Status Code: 404
 }
 ```
 
+### Get user by user id
+
+Access-Token: Required
+
+Path:  `GET '/user/:id`
+
+Parameters:
+
+|  name |  type |  description
+|-------|-------|-------------------------
+|user_id|integer|assigned at registration
+
+Example data successful response:
+
+```json
+
+{
+  "user_name": "dsfasdf",
+  "first_name": "rsdffdasdf",
+  "last_name": "rsfsdfdfdf",
+  "email": "whattt@sup.com",
+  "created_at": "2015-06-19T15:51:02.488Z"
+}
+```
+
+Example data failure response:
+
+```json
+Response Status Code: 404
+
+{
+  "message": "There are no users to display."
+}
+```
+
+
 ### Delete current user
 
 Access-Token:

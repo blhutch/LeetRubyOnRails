@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authenticate_with_token!, only: [:get_user, :get_users, :delete_user]
+  before_action :authenticate_with_token!, only: [:get_user, :get_users, :delete_user, :get_current_user]
+
+  def get_current_user
+    render json: current_user.as_json(except: [:password]), status: :ok
+  end
 
   def register
     passhash = self.password_encryption(params[:password])
